@@ -1,0 +1,45 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Graduation admission prediction </title>
+  
+
+</head>
+
+<body>
+<ul>
+  <li>GRE Score (out of 340)</li>
+<li>TOEFL Score (out of 120)</li>
+<li>University Rating (out of 5)</li>
+<li>Statment of Purpose {SOP} (out of 5)</li>
+<li>Letter of Recommendation {LOP} Strength (out of 5)</li>
+<li>Undergraduate CGPA (out of 10)</li>
+<li>Research Experience (Either 0 or 1)</li>
+</ul>
+{% block form%}
+     <form method='POST' action='{{url_for('predict')}}'>
+           </div>
+
+			<input type="number" name="GRE Score" placeholder="GRE Score" required="required" > <br>
+			<input type="number" name="TOEFL Score" placeholder="TOEFL Score" required="required" > <br>
+			<input type="number" name="University Rating" placeholder="University Rating" required="required" ><br>
+			<input type="number" name="SOP" placeholder="SOP" required="required" ><br>
+			<input type="number" name="LOR" placeholder="LOR" required="required"  ><br>
+			<input type="number" name="CGPA" placeholder="CGPA" required="required" ><br>
+			<input type="number" name="Research" placeholder="Research" required="required" ><br>
+			
+			<br>
+			<input type="submit" ></input>
+			
+			<h4 style="text-align: center;">{{prediction_text}}</h4>
+      </div>
+      
+    
+  </form>
+  {%endblock form %}
+  
+</body>
+</html>
